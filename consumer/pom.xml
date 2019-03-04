@@ -2,29 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>firstmodel</artifactId>
+        <groupId>com.tw.cloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tw.cloud</groupId>
-    <artifactId>firstmodel</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>eureka</module>
-        <module>service</module>
-        <module>consumer</module>
-    </modules>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
-    </parent>
-
-
-    <!--<properties>
+    <artifactId>consumer</artifactId>
+    <properties>
         <javaVersion>1.8</javaVersion>
     </properties>
-    &lt;!&ndash; 使用dependencyManagement进行版本管理 &ndash;&gt;
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -39,12 +28,17 @@
     </dependencyManagement>
 
     <dependencies>
-        &lt;!&ndash; 引入eureka server依赖 &ndash;&gt;
+        <!-- 引入eureka 客户端依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!-- 引入ribbon 依赖 ，用来实现负载均衡，我们这里只是使用，先不作其他介绍-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
         </dependency>
 
-    </dependencies>-->
+    </dependencies>
 
 </project>
