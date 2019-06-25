@@ -27,7 +27,7 @@ public class HelloController {
         ServiceInstance instance = discoveryClient.getLocalServiceInstance();
         //打印服务的服务id
         logger.info("*********" + instance.getServiceId());
-        return "hello,this is hello-service";
+        return "hello,this is hello-service"+instance.getServiceId();
     }
 
 }
