@@ -39,3 +39,8 @@
     启动测试
     访问 http://localhost:9999/hello-consumer
     ok
+    
+    
+#计划
+   [2.0参考](https://blog.csdn.net/icarusliu/article/details/79461012)
+   [3.0参考](https://blog.csdn.net/butterBallj/article/details/81284292)
